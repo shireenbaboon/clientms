@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Add New Record</h1>
+    <form method="POST" class="post-form" action="/customer_details/emp">{% csrf_token %}
+            {% csrf_token %}
+        <div class="container">
+    <br>
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <h4>Enter customer details</h4>
+        </div>
+      </div>
+            <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Customer Id:</label>
+        <div class="col-sm-4">
+          {{ form.id }}
+        </div>
+      </div>
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Customer name:</label>
+        <div class="col-sm-4">
+          {{ form.name }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Make:</label>
+        <div class="col-sm-4">
+          {{ form.make }}
+        </div>
+      </div>
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Model:</label>
+        <div class="col-sm-4">
+          {{ form.model }}
+        </div>
+      </div>
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">vin_number:</label>
+        <div class="col-sm-4">
+          {{ form.vin_number }}
+        </div>
+      </div>
+            <div class="form-group row">
+        <label class="col-sm-2 col-form-label">purchase_date:</label>
+        <div class="col-sm-4">
+          {{ form.purchase_date }}
+        </div>
+      </div>
+            <div class="form-group row">
+        <label class="col-sm-2 col-form-label">last_service_date:</label>
+        <div class="col-sm-4">
+          {{ form.last_service_date }}
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+        </div>
+    </form>
+{% endblock content %}
